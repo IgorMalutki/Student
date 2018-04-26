@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.AdminController">
+   <children>
+      <TextField fx:id="tf_nr_kursanta" layoutY="2.0" promptText="nr kursanta " />
+      <Button fx:id="btn_select" layoutX="165.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#selectAction" text="Szukaj" />
+      <TableView fx:id="tab" layoutY="212.0" prefHeight="291.0" prefWidth="770.0">
+        <columns>
+          <TableColumn fx:id="c_project1grade" onEditCommit="#c_project1grade_edit_commit" prefWidth="57.0" text="Projekt1" />
+          <TableColumn fx:id="c_project1descgrade" prefWidth="121.0" text="Projekt1+Opis" />
+            <TableColumn fx:id="c_project2grade" prefWidth="53.0" text="Projekt2" />
+            <TableColumn fx:id="c_project2descgrade" prefWidth="125.0" text="Projekt2+Opis" />
+            <TableColumn fx:id="c_project3grade" prefWidth="90.0" text="Projekt3" />
+            <TableColumn fx:id="c_project3descgrade" prefWidth="123.0" text="Projekt3+Opis" />
+            <TableColumn fx:id="c_project4grade" prefWidth="55.0" text="Projekt4" />
+            <TableColumn fx:id="c_project4descgrade" prefWidth="174.0" text="Projekt4+Opis" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_submit" layoutX="538.0" layoutY="503.0" mnemonicParsing="false" onMouseClicked="#submitAction" prefHeight="25.0" prefWidth="217.0" text="Submit" />
+      <TableView fx:id="tab1" layoutY="35.0" prefHeight="179.0" prefWidth="770.0">
+        <columns>
+          <TableColumn fx:id="c_student_id" prefWidth="37.0" text="ID" />
+          <TableColumn fx:id="c_name" prefWidth="116.0" text="IMIĘ" />
+            <TableColumn fx:id="c_lname" prefWidth="137.0" text="NAZWISKO" />
+            <TableColumn fx:id="c_email" minWidth="0.0" prefWidth="92.0" text="E-MAIL" />
+            <TableColumn fx:id="c_passwd" minWidth="0.0" prefWidth="83.0" text="HASŁO" />
+            <TableColumn fx:id="c_git_hub" prefWidth="114.0" text="GITHUB LOGIN" />
+            <TableColumn fx:id="c_phone" prefWidth="102.0" text="TELEFON" />
+            <TableColumn fx:id="c_role" prefWidth="87.0" text="UPRAWNIENIA" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
